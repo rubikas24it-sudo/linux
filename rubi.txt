@@ -1,0 +1,95 @@
+
+#!/bin/bash/
+clear
+echo "Linux Commands"
+echo "**************"
+echo "1.Removing Files"
+echo "2.Copying Files"
+echo "3.File Display - cat"
+echo "4.Move the file"
+echo "5.Comparing Files"
+echo "6.Word Count"
+echo "7.Split the file"
+echo "8.Find the Difference"
+echo "Enter the number of choice"
+read a
+if [ "$a" = 1 ]
+then
+echo "List of files"
+echo "-------------"
+ls
+rm rubika2.sh
+echo "List of files after removing a file with rm command"
+echo "---------------------------------------------------"
+ls
+elif [ "$a" = 2 ]
+then
+echo "Content of the rubika2"
+echo "---------------------------"
+cat rubika2.sh
+echo
+echo "Copying rubika2 to rubika3 using cp command..."
+cp rubika2.sh rubika3.sh
+echo "Content of the rubika3"
+echo "-----------------------"
+cat rubika3.sh
+elif [ "$a" = 3 ]
+then
+
+echo "Displaying the Content of rubika3 using cat command..."
+echo
+cat rubika3.sh
+elif [ "$a" = 4 ]
+then
+echo "Moving the Content of the file using mv command"
+echo "---------------------------------------------"
+echo "Move the content of rubika3 to rubika4..."
+mv rubika3.sh rubika4.sh
+echo
+cat rubika4.sh
+elif [ "$a" = 5 ]
+then
+echo "Content of rubika2"
+cat rubika2.sh
+echo
+echo "Content of rubika4"
+cat rubika4.sh
+echo
+echo "Comparing two files using cmp command..."
+cmp rubika2.sh rubika4.sh
+elif [ "$a" = 6 ]
+then
+echo "Content of rubika2"
+echo
+cat rubika4.sh
+echo
+echo "Word counting of the rubika2 using wc..."
+wc rubika2.shecho "------------"
+cat rubika5a.sh
+echo "rubika5b"
+echo "------------"
+cat rubika5b.sh
+elif [ "$a" = 8 ]
+then
+echo
+echo "Content of rubika2..."
+cat rubika.sh
+echo
+echo "Content of rubika3..."
+cat rubika3.sh
+echo
+echo "Difference between file1 and file2"
+diff rubika2.sh rubika3.sh
+else
+echo "Invalid Value"
+fi
+elif [ "$a" = 7 ]
+then
+echo "Content of rubika4"
+cat rubika4.sh
+echo
+echo "Splitting rubika4 into 3-line chunks..."
+split -l 3 rubika4.sh rubika5.sh
+echo "File successfully split."
+
+echo "rubika5a"
